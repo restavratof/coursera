@@ -21,6 +21,7 @@ print(separator)
 print('-','Part 2: Dawn -> Dusk')
 
 c = "6c73d5240a948c86981bc294814d"
+# c = '09e1c5f70a65ac519458e7e53f36'
 
 def strxor(s1,s2):
     return ''.join(chr(ord(a) ^ ord(b)) for a,b in zip(s1,s2))
