@@ -63,29 +63,8 @@ print(f"'{ch1}' hex({ch1.encode().hex()}) binary({bin(ord(ch1))})")
 
 print('4',separator)
 all_list = [ ' ', '!', '#', '$', '%', '&', '`', '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', ']', '^', '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~' ]
-# for ch in all_list:
-#     print(f"'{ch}': {ord(ch)}  : {hex(ord(ch))}  : {ch.encode()} : {bin(ord(ch))} : {xor(ch.encode(), b' ')}")
 
-raw_str = 'Hello World!'
-raw_bytes = raw_str.encode()
-print(f'ASCII -> Raw Bytes   : {raw_bytes}')
-hex_val = raw_bytes.hex()
-print(f'Raw Bytes -> HEX     : {hex_val}')
-ascii_val = raw_bytes.decode()
-print(f'Raw Bytes -> ASCII   : {ascii_val}')
-# Convert Random RAW Bytes to ASCII string - This cannot be done! Random RAW Bytes do not correspond to ascii or utf-8 codes.
-ch_val = 'A'
-ord_val = ord(ch_val)
-print(f'Char -> ASCII code   : {ord_val}')
-print(f'ASCII code -> Char   : {chr(ord_val)}')
-int_bytes_val = bytes([200])
-print(f'INT (0,256) -> Raw Bytes : {int_bytes_val}')
-print(f'Raw Bytes -> INT     : {int(int_bytes_val.hex(),16)}')
-print(f'Raw Bytes -> INT     : {ord(int_bytes_val)}')
-hex_val = hex(200)
-print(f'INT -> Hex           : {hex_val}')
-print(f'Hex -> INT           : {0xc8}')   # automatic
-print(f'Decimal INT -> Binary: {bin(200)}')
-print(f'Binary -> Decimal INT: {0b11001000}')
+for ch in all_list:
+    print(f"'{ch}': {hex(ord(ch))} : {ch.encode()} : {xor(ch.encode(), b' ')}")
 
 

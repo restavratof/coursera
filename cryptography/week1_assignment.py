@@ -28,16 +28,30 @@ def random(size=16):
 def encrypt(key, msg):
     print('-'*30)
     c = strxor(key, msg)
-    print(f'c={c}')
-    # print(c.encode('hex'))
+    print(f'c : {c}')
     return c
 
 
 def main():
     key = str(random(1024))
     ciphertexts = [encrypt(key, msg) for msg in MSGS]
-    # print(ciphertexts)
+    # print(f'2: {ciphertexts}')
 
 
-main()
+# main()
+
+def xor(a, b):
+    return bytes(x^y for x, y in zip(a, b))
+
+for msg in MSGS:
+    mess_xor = xor(target.encode(), msg.encode())
+    print(f'result : {mess_xor}')
+
+print('4','-'*50)
+all_list = [ ' ', '!', '#', '$', '%', '&', '`', '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', ']', '^', '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~' ]
+space = ' '
+for ch in all_list:
+    print(f"'{ch}': {hex(ord(ch))} : {ch.encode()} : {xor(ch.encode(), space.encode())}")
+
+
 
