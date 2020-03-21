@@ -36,4 +36,9 @@ print(f'Binary -> Decimal INT: {0b11001000}')
 # Binary -> Decimal INT: 200
 
 
+#xor two unequal strings of raw bytes
+def xorb(a,b):
+    return bytes(x^y for x,y in zip(a,b))
 
+print(xorb(b'A string of raw bytes',b'Another string of raw bytes'))
+# b'\x00N\x1c\x00\x1a\x0c\x1cGS\x1b\x14I\x1c\x06WO\x04Y\x06\x04\x04'
