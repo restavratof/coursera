@@ -4,7 +4,7 @@ import codecs
 from collections import Counter
 
 print('-' * 100)
-print('-', f'Challenge 1 - Single-byte XOR cipher:')
+print('-', f'Challenge 3 - Single-byte XOR cipher:')
 print('-' * 100)
 
 hex_enc_str = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'

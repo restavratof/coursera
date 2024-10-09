@@ -2,7 +2,7 @@
 
 
 print('-' * 100)
-print('-', f'Challenge 1 - Fixed XOR:')
+print('-', f'Challenge 2 - Fixed XOR:')
 print('-' * 100)
 
 
